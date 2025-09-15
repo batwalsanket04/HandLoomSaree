@@ -12,19 +12,19 @@ const Navbar = () => {
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex space-x-8 text-gray-700 font-medium">
-          <li><a href="#" className="hover:text-pink-600">Home</a></li>
+          <li><a href="#" className=" ms-3 hover:text-pink-600">Home</a></li>
           <li><a href="#" className="hover:text-pink-600">Collections</a></li>
           <li><a href="#" className="hover:text-pink-600">About Us</a></li>
           <li><a href="#" className="hover:text-pink-600">Contact</a></li>
         </ul>
         <div className="flex items-center space-x-4">
           {/* Search */}
-          <button className="hidden me-7 md:block text-gray-700 hover:text-pink-600">
+          <button className="hidden me-7  ms-7 md:block text-gray-700 hover:text-pink-600">
             <Search size={22} />
           </button>
 
           {/* Cart */}
-          <button className="hidden me-7 md:block relative text-gray-700 hover:text-pink-600">
+          <button className="hidden me-7  ms-7 md:block relative text-gray-700 hover:text-pink-600">
             <ShoppingCart size={22} />
             {/* Cart badge */}
             <span className="absolute -top-2 -right-2 bg-pink-600  text-white text-xs w-5 h-5 rounded-full flex items-center justify-center">
@@ -33,8 +33,8 @@ const Navbar = () => {
           </button>
 
           {/* CTA Button */}
-          <button className="hidden md:block bg-pink-600 text-white px-[10px] py-2 rounded-full hover:bg-pink-700 transition">
-            Shop Now
+          <button className="hidden  ms-7 md:block bg-pink-600 text-white px-8 py-2 rounded-full hover:bg-pink-700 transition">
+            Sign In
           </button>
 
           {/* Mobile Toggle Button */}
