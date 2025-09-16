@@ -1,47 +1,11 @@
 import React from 'react'
-import menuimg from '../../assets/hero3.jpg'
+import { SareeList} from '../../assets/assets'
 
 const ExploreMenu = ({category,setCategory}) => {
 
- const ExploreMenu=[
-    {   
-        menuName:"Jari",
-        Menuimg:menuimg
-    },
-    {   
-        menuName:"All-Over",
-        Menuimg:menuimg
-    },
-    {   
-        menuName:"Muniya",
-        Menuimg:menuimg
-    },
-    {   
-        menuName:"Butti",
-        Menuimg:menuimg
-    },
-    {   
-        menuName:"Pickock",
-        Menuimg:menuimg
-    },
-    {   
-        menuName:"Lehenga",
-        Menuimg:menuimg
-    },
-    {   
-        menuName:"Dupatta",
-        Menuimg:menuimg
-    },
-     {   
-        menuName:"Piece",
-        Menuimg:menuimg
-    }
-
-
-
- ]
+ 
   return (
-    
+
         <div className='w-[99%] m-auto'>
              <h1 className="text-2xl text-justify p-3 w-full  sm:text-2xl sm:mt-[50px]  md:text-6xl md:mt-[20px] lg:text-4xl xl:text-5xl xl:mt-20 font-bold text-pink-600 drop-shadow-lg 
               2xl:text-7xl ">
@@ -64,7 +28,7 @@ const ExploreMenu = ({category,setCategory}) => {
       <img
         src={val.Menuimg}
         alt={val.menuName}
-        className="w-full h-25 object-cover"
+        className="w-full h-30 object-cover"
       />
       <div className="p-4 text-center">
         <p className="font-semibold text-lg">{val.menuName}</p>
