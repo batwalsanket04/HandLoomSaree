@@ -52,7 +52,7 @@ const Navbar = () => {
           <a href="#" className="block text-gray-700 hover:text-pink-600">Collections</a>
           <a href="#" className="block text-gray-700 hover:text-pink-600">About Us</a>
           <a href="#" className="block text-gray-700 hover:text-pink-600">Contact</a>
-          <button className="w-full bg-pink-600 text-white px-4 py-2 rounded-full hover:bg-pink-700">
+          <button className="w-full bg-pink-600 text-white px-4 py-2 rounded-full hover:bg-pink-700 md-w-[200px]">
             Sign In
           </button>
         </div>
