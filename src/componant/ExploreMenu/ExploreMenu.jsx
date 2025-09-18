@@ -15,10 +15,10 @@ const ExploreMenu = ({category,setCategory}) => {
    Explore our collection of crafted pieces made to match your style and story.
   </p>   
  <div className="explore-list flex flex-wrap cursor-pointer items-center text-center overflow-scroll justify-between gap-6 p-4">
-  {ExploreMenu.map((val, index) => (
+  {SareeList.map((val, index) => (
     <div
       key={index}
-      onClick={() => setCategory(val.menuName)}  
+      onClick={() => setCategory(prev=>prev===val.menuName? "All":val.menuName)}  
       className={`w-[150px] text-center 
         sm:w-1/5 sm:max-w-1/2 md:min-w-1/5 md:max-w-1/5 lg:min-w-1/10 xl:max-w-1/10 
         bg-white shadow-md rounded-2xl overflow-hidden transition duration-300
@@ -28,7 +28,7 @@ const ExploreMenu = ({category,setCategory}) => {
       <img
         src={val.Menuimg}
         alt={val.menuName}
-        className="w-full h-30 object-cover"
+        className="w-full h-30 object-cover "
       />
       <div className="p-4 text-center">
         <p className="font-semibold text-lg">{val.menuName}</p>

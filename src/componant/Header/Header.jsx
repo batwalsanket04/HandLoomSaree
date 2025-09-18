@@ -1,10 +1,10 @@
 import React from "react";
-import hero from "../../assets/download.jpeg";
+import hero from "../../assets/hero.jpg";
 
 const Header = () => {
   return (
     <section
-      className="relative w-[90%] rounded-3xl py-16 px-4 sm:px-6 mt-[80px] 
+      className="relative w-[95%] rounded-3xl py-16 px-4 sm:px-6 mt-[80px] 
                  h-[50vh] sm:h-[75vh] md:h-[90vh] my-[30px] mx-auto text-left md:mt-[100px]  
                 lg:min-h-[80vh] bg-no-repeat bg-center bg-cover bg-blend-overlay lg:mt-[80px] "
       style={{ backgroundImage: `url(${hero})` }}
