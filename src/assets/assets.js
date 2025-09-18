@@ -25,11 +25,23 @@ import lehenga10 from "./Lehenga/lehenga10.jpg";
 // Example extra menu icons/images
 
 import pickock from '../assets/pickock2.jpg';
+import pickock2 from '../assets/pickock3.jpg'
 import all from '../assets/All.jpg'
 import jari from '../assets/Zari.jpg'
+import linan from '../assets/zari.jpg'
 import butti from '../assets/butti.jpg'
 import piece from '../assets/piece.jpg'
 import dupatta from '../assets/dupatta.jpeg';
+import muniya from '../assets/muniya.jpg'
+import all2 from '../assets/all2.jpg'
+import dupattta from '../assets/dupattta4.jpg'
+ 
+ 
+import silk1 from '../assets/silk1.jpg'
+import silk2 from '../assets/silk2.jpg'
+import silk3 from '../assets/silk3.jpg'
+
+
  
 
 
@@ -37,7 +49,8 @@ import dupatta from '../assets/dupatta.jpeg';
 export const Categories = {
  saree1,saree2,saree3,saree4,saree5,saree6,saree7,saree8,saree9,saree10,
  lehenga1,lehenga2,lehenga3,lehenga4,lehenga5,lehenga6,lehenga7,lehenga8,lehenga9,lehenga10,
- all,pickock,butti,piece,dupatta
+ all,pickock,butti,piece,dupatta,muniya,all2,
+ silk1,silk2,silk3,linan,pickock2,linan,dupattta
  
 
 }
@@ -53,7 +66,7 @@ export const Categories = {
     },
     {   
         menuName:"Muniya",
-        Menuimg:saree2
+        Menuimg:muniya
     },
     {   
         menuName:"Butti",
@@ -84,7 +97,7 @@ export const SareeList2 = [
   {
     id: "1",
     name: "Brocade Saree",
-    img: saree1,
+    img: all2,
     description: "A luxurious brocade saree with intricate golden zari work, perfect for weddings and festive occasions.",
     category: "Paithani",
     price: "₹8,999"
@@ -115,16 +128,16 @@ export const SareeList2 = [
   },
   {
     id: "5",
-    name: "Patola Saree",
-    img: saree5,
-    description: "Exquisite Patola saree with double ikat weaving, a true heritage piece for special occasions.",
-    category: "Patola",
+    name: "Simple Silk",
+    img: silk1,
+    description: "Exquisite silk saree with double ikat weaving, a true heritage piece for special occasions.",
+    category: "silk",
     price: "₹18,900"
   },
   {
     id: "6",
     name: "Linen Saree",
-    img: saree6,
+    img: linan,
     description: "Soft and breathable linen saree with subtle embroidery, perfect for everyday elegance.",
     category: "Linen",
     price: "₹4,500"
@@ -132,7 +145,7 @@ export const SareeList2 = [
   {
     id: "7",
     name: "Lehenga",
-    img: lehenga1,
+    img: lehenga6,
     description: "Soft and breathable Zari Weaving  with subtle embroidery, perfect for everyday elegance.",
     category: "Linen",
     price: "₹4,500"
@@ -140,14 +153,14 @@ export const SareeList2 = [
   {
     id: "8",
     name: "Butti",
-    img: saree6,
+    img: butti,
     description: "Soft and breathable Butties saree with subtle embroidery, perfect for everyday elegance.",
     category: "Linen",
     price: "₹4,500"
   },{
     id: "9",
     name: "Muniya",
-    img: saree6,
+    img: muniya,
     description: "Soft and breathable Muniya saree with subtle embroidery, perfect for everyday elegance.",
     category: "Linen",
     price: "₹4,500"
@@ -155,16 +168,25 @@ export const SareeList2 = [
   {
     id: "10",
     name: "Pickock",
-    img: saree6,
+    img: pickock2,
     description: "Soft and breathable linen saree with subtle embroidery, perfect for everyday elegance.",
     category: "Linen",
     price: "₹4,500"
-  },{
+  },
+  {
     id: "11",
     name: "Dupatta",
-    img: saree6,
+    img: dupattta,
     description: "Soft and breathable Dupatta with subtle embroidery, perfect for everyday elegance.",
     category: "Linen",
+    price: "₹4,500"
+  }
+  ,{
+    id: "12",
+    name: "Brocade",
+    img: all,
+    description: "Soft and breathable Dupatta with subtle embroidery, perfect for everyday elegance.",
+    category: "Paithani",
     price: "₹4,500"
   }
 ];
