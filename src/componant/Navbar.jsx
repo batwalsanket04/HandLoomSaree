@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Menu, X, ShoppingCart, Search } from "lucide-react";
 
-const Navbar = () => {
+const Navbar = ({setShowLogine}) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -36,7 +36,7 @@ const Navbar = () => {
           </button>
 
           {/* CTA Button */}
-          <button className="hidden md:block bg-pink-600 text-white px-6 py-2 rounded-full hover:bg-pink-700 transition">
+          <button className="hidden md:block bg-pink-600 text-white px-6 py-2 rounded-full hover:bg-pink-700 transition"onClick={()=>setShowLogine(true)} >
             Sign In
           </button>
 
@@ -57,7 +57,7 @@ const Navbar = () => {
           <a href="#" className="block text-gray-700 hover:text-pink-600">Collections</a>
           <a href="#" className="block text-gray-700 hover:text-pink-600">About Us</a>
           <a href="#" className="block text-gray-700 hover:text-pink-600">Contact</a>
-          <button className="w-full bg-pink-600 text-white px-4 py-2 rounded-full hover:bg-pink-700">
+          <button className="w-full bg-pink-600 text-white px-4 py-2 rounded-full hover:bg-pink-700"onClick={()=>setShowLogine(true)} >
             Sign In
           </button>
         </div>

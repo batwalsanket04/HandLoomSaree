@@ -22,10 +22,10 @@ const ExploreMenu = ({category,setCategory}) => {
       key={index}
       onClick={() => setCategory(prev=>prev===val.category? "All":val.category)}  
     
-      className={`w-[150px] text-center 
+      className={`w-[150px] text-center hover:scale-105  
         sm:w-1/5 sm:max-w-1/2 md:min-w-1/5 md:max-w-1/5 lg:min-w-1/10 xl:max-w-1/10 
         bg-white shadow-md rounded-2xl overflow-hidden transition duration-300
-        ${category === val.menuName ? "border-2 border-pink-600 shadow-lg " : ""} 
+       ${category === val.category ? "border-2 border-pink-600 shadow-lg" : ""} 
       `}
     >
       <img

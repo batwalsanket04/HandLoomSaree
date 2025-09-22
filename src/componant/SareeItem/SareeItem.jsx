@@ -33,7 +33,7 @@ const SareeItem = ({ id, name, price, description, img, category }) => {
       <div className="p-4 flex flex-col flex-1">
         {/* Name + Category */}
         <h3 className="text-lg font-semibold text-gray-800">{name}</h3>
-        <p className="text-sm text-pink-600 font-medium">{category}</p>
+        {/* <p className="text-sm text-pink-600 font-medium">{category}</p> */}
 
         {/* Rating */}
         <div className="flex items-center space-x-1 text-yellow-400 mt-2">

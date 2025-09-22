@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 import hero from "../../assets/hero.jpg";
+import LoginPopUp from "../LoginPopUp/LoginPopUp";
 
 const Header = () => {
+   
   return (
     <section
       className="relative w-[95%] rounded-3xl py-16 px-4 sm:px-6 mt-[80px] 

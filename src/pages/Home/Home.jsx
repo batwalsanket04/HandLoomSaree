@@ -5,6 +5,8 @@ import FoodDisplay from '../../componant/SareeDisplay/SareeDisplay'
 
 const Home = () => {
   const [category,setCategory]=useState('All')
+
+  
   return (
     <div>
       <Header/>

@@ -7,15 +7,22 @@ import Navbar from './componant/Navbar'
 import Home from './pages/Home/Home'
 import Cart from './pages/Cart/Cart'
 import PlaceOrder from './pages/PlaceOrder/PlaceOrder'
+import Footer from './componant/Footer/Footer'
+import ScrollTop from './componant/Footer/ScrollTop'
+import LoginPopUp from './componant/LoginPopUp/LoginPopUp'
  
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
+  const [showLogin,setShowLogine]=useState(false);
 
   return (
     <>
+    {
+      showLogin?<LoginPopUp  setShowLogine={setShowLogine}/>:<></>
+    }
     <Router>
-      <Navbar/>
+      <Navbar setShowLogine={setShowLogine}/>
       <Routes>
         <Route path='/' element={<Home/>} />
         <Route path='/cart' element={<Cart/>} />
@@ -23,6 +30,8 @@ function App() {
 
         
       </Routes>
+      <ScrollTop/>
+      <Footer/>
     </Router>
     </>
   )
