@@ -58,7 +58,8 @@ export const Categories = {
  export const SareeList=[
     {   
         menuName:"Jari",
-        Menuimg:jari
+        Menuimg:jari,
+        category: "Paithani",
     },
     {   
         menuName:"All-Over",

@@ -11,11 +11,20 @@ const SareeDisplay = ({category}) => {
               2xl:text-7xl'>Top Saree's Near You</h2>
       <div className='grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 p-6'>
         {
-          SareeList2.map((val,index,)=>{
-            return <SareeItem key={index} id={val.id} name={val.name} img={val.img} description={val.description} category={val.category} price={val.price} />
-
-          })
-        }
+          SareeList2
+           .filter(val=> category===val.category  || category=='All')
+          .map((val,index,)=>(
+            <SareeItem
+             key={index} 
+            id={val.id} 
+            name={val.name}
+            img={val.img}
+            description={val.description} 
+            category={val.category}
+            price={val.price}
+             />
+          ))}
+          
       </div>
     </div>
   )

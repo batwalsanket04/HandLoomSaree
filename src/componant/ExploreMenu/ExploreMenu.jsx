@@ -1,7 +1,9 @@
-import React from 'react'
+import React,{useState} from 'react'
 import { SareeList} from '../../assets/assets'
 
 const ExploreMenu = ({category,setCategory}) => {
+  const[itemss,filteredItems]=useState([])
+
 
  
   return (
@@ -18,11 +20,12 @@ const ExploreMenu = ({category,setCategory}) => {
   {SareeList.map((val, index) => (
     <div
       key={index}
-      onClick={() => setCategory(prev=>prev===val.menuName? "All":val.menuName)}  
+      onClick={() => setCategory(prev=>prev===val.category? "All":val.category)}  
+    
       className={`w-[150px] text-center 
         sm:w-1/5 sm:max-w-1/2 md:min-w-1/5 md:max-w-1/5 lg:min-w-1/10 xl:max-w-1/10 
         bg-white shadow-md rounded-2xl overflow-hidden transition duration-300
-        ${category === val.menuName ? "border-2 border-pink-600 shadow-lg" : " "} 
+        ${category === val.menuName ? "border-2 border-pink-600 shadow-lg " : ""} 
       `}
     >
       <img
