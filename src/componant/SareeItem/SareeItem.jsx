@@ -1,6 +1,10 @@
-import React from "react";
+import React, { useContext, useState } from "react";
+import { NavLink } from "react-router-dom";
+import {context} from "../../Context/StoreContext";
 
 const SareeItem = ({ id, name, price, description, img, category }) => {
+ 
+  const {cartItem,addToCart,removeFromCart}=useContext(context);
   return (
     <div className="bg-white rounded-2xl shadow-md hover:shadow-lg transition overflow-hidden flex flex-col">
       {/* Image */}
@@ -8,8 +12,21 @@ const SareeItem = ({ id, name, price, description, img, category }) => {
         <img
           src={img}
           alt={name}
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover" 
         />
+        {
+          !cartItem[id]?(
+            <button className="absolute bottom-2 right-2 bg-white text-gray-500 p-2 rounded-full shadow-md hover:bg-gray-200 transition" 
+            onClick={()=>addToCart(id)}><i className="fa-solid fa-plus"></i></button>
+          ):(
+            <div  className="absolute bottom-2 right-2 bg-white rounded-full shadow-md flex items-center gap-3 px-3 py-1">
+              
+            <button className="text-red-500 hover:text-red-700" onClick={()=>removeFromCart(id)}><i className="fa-solid fa-minus"></i></button>
+            <p>{cartItem[id]}</p>
+            <button  className="text-green-500 hover:text-green-700" onClick={()=>addToCart(id)}><i className="fa-solid fa-plus"></i></button>
+            </div>
+          )
+        }
       </div>
 
       {/* Content */}

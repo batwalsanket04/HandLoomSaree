@@ -147,7 +147,7 @@ export const SareeList2 = [
     name: "Lehenga",
     img: lehenga6,
     description: "Soft and breathable Zari Weaving  with subtle embroidery, perfect for everyday elegance.",
-    category: "Linen",
+    category: "paithani",
     price: "₹4,500"
   },
   {
@@ -162,7 +162,7 @@ export const SareeList2 = [
     name: "Muniya",
     img: muniya,
     description: "Soft and breathable Muniya saree with subtle embroidery, perfect for everyday elegance.",
-    category: "Linen",
+    category: "paithani",
     price: "₹4,500"
   },
   {
@@ -170,7 +170,7 @@ export const SareeList2 = [
     name: "Pickock",
     img: pickock2,
     description: "Soft and breathable linen saree with subtle embroidery, perfect for everyday elegance.",
-    category: "Linen",
+    category: "paithani",
     price: "₹4,500"
   },
   {
@@ -178,7 +178,7 @@ export const SareeList2 = [
     name: "Dupatta",
     img: dupattta,
     description: "Soft and breathable Dupatta with subtle embroidery, perfect for everyday elegance.",
-    category: "Linen",
+    category: "paithani",
     price: "₹4,500"
   }
   ,{
