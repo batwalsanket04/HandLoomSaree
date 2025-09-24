@@ -1,0 +1,17 @@
+{
+  "Users": [
+    {
+      "name": "sanket batwal",
+      "email": "batwalsanket@gmail.com",
+      "password": "12345678",
+      "id": 1
+    },
+    {
+      "name": "sanket batwal",
+      "email": "batwalsanket@gmail.com",
+      "password": "12345678",
+      "id": 2
+    }
+  ],
+  "Products": []
+}

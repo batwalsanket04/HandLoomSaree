@@ -1,18 +1,42 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+
 
 const LoginPopUp = ({ setShowLogine }) => {
   const [currState, setCurrState] = useState("Sign Up");
+
+  const [data,setData]=useState({name:"",email:"", password:""});
 
   const toggleForm = () => {
     setCurrState(currState === "Sign Up" ? "Sign In" : "Sign Up");
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Add login/signup logic here
-    console.log(currState + " submitted");
-  };
+  const formHandle=(e)=>
+  {
+    const {name,value}=e.target;
 
+    setData({...data,[name]:value})
+    console.log(e.target.value);
+  }
+
+  const handleSubmit =async(e) => {
+    e.preventDefault();
+    console.log(data);
+try{
+    await axios.post('http://localhost:3000/Users',data);
+    console.log(data);
+   window.confirm("user logged in..!")
+
+
+   setData({name:"",email:"", password:""})
+}catch(err){
+  console.log("error",err)
+}
+  };
+  
+
+
+ 
   return (
     <div className="fixed inset-0  bg-opacity-30 backdrop-blur-sm flex items-center justify-center z-50">
       <div className="bg-white rounded-2xl shadow-3xl w-full max-w-md p-8 md:p-10 relative ">
@@ -43,6 +67,8 @@ const LoginPopUp = ({ setShowLogine }) => {
               <input
                 type="text"
                 name="name"
+                value={data.name}
+                onChange={(e)=>formHandle(e)}
                 id="name"
                 placeholder="Enter your name"
                 required
@@ -61,6 +87,8 @@ const LoginPopUp = ({ setShowLogine }) => {
             <input
               type="email"
               name="email"
+              value={data.email}
+              onChange={(e)=>formHandle(e)}
               id="email"
               placeholder="Enter your email"
               required
@@ -78,6 +106,8 @@ const LoginPopUp = ({ setShowLogine }) => {
             <input
               type="password"
               name="password"
+              value={data.password}
+              onChange={(e)=>formHandle(e)}
               id="password"
               placeholder="Enter your password"
               required

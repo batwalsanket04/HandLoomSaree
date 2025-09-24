@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { BrowserRouter as Router,Routes,Route} from 'react-router-dom'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
@@ -16,10 +16,22 @@ function App() {
   const [count, setCount] = useState(0);
   const [showLogin,setShowLogine]=useState(false);
 
+
+   useEffect(()=>
+  {
+    const timer=setTimeout(()=>{
+      setShowLogine(true);
+    },5000)
+    return ()=>clearTimeout(timer);
+    
+  },[])
+
+
   return (
     <>
+    <h1 className='text-3xl font-bold'>My Website</h1>
     {
-      showLogin?<LoginPopUp  setShowLogine={setShowLogine}/>:<></>
+      showLogin && <LoginPopUp  setShowLogine={setShowLogine}/> 
     }
     <Router>
       <Navbar setShowLogine={setShowLogine}/>
