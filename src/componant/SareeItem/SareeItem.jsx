@@ -50,9 +50,7 @@ const SareeItem = ({ id, name, price, description, img, category }) => {
         {/* Price + Button */}
         <div className="mt-4 flex items-center justify-between">
           <span className="text-lg font-bold text-pink-600">{price}</span>
-          <button className="bg-pink-600 text-white px-4 py-2 rounded-full hover:bg-pink-700 transition">
-            Add to Cart
-          </button>
+         
         </div>
       </div>
     </div>

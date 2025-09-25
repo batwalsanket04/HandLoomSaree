@@ -29,7 +29,6 @@ function App() {
 
   return (
     <>
-    <h1 className='text-3xl font-bold'>My Website</h1>
     {
       showLogin && <LoginPopUp  setShowLogine={setShowLogine}/> 
     }

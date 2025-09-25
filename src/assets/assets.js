@@ -301,7 +301,7 @@ export const SareeList2 = [
   },
   {
     id: "22",
-    name: " Black cotton saree with golden butti",
+    name: " Black  saree with golden butti",
     img: butti1,
     description: "Soft and breathable linen saree with subtle embroidery, perfect for everyday elegance.",
     category: "butti",

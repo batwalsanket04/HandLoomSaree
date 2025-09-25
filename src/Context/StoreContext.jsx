@@ -22,8 +22,29 @@
     setCartItem((prev)=>({...prev,[itemId]:prev[itemId]-1}))
   }
 
+  const getTotalCartAmount=()=>
+  {
+    let totalAmount=0;
+
+    for(const item in cartItem)
+    {
+      if(cartItem[item]>0)
+      {
+      let iteminfo=SareeList2.find((product)=>product.id===item)
+      totalAmount += iteminfo.price * cartItem[item];
+      }
+  }
+  return totalAmount;
+
+  }
+
     const contextValue={
-      SareeList2,cartItem,setCartItem,addToCart,removeFromCart
+      SareeList2,
+      cartItem,
+      setCartItem,
+      addToCart,
+      removeFromCart,
+      getTotalCartAmount
     }
   
   useEffect(()=>{
