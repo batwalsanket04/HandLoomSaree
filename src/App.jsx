@@ -10,6 +10,8 @@ import PlaceOrder from './pages/PlaceOrder/PlaceOrder'
 import Footer from './componant/Footer/Footer'
 import ScrollTop from './componant/Footer/ScrollTop'
 import LoginPopUp from './componant/LoginPopUp/LoginPopUp'
+import About from './componant/About/About'
+import Collection from './componant/Collection/Collection'
  
 
 function App() {
@@ -36,6 +38,8 @@ function App() {
       <Navbar setShowLogine={setShowLogine}/>
       <Routes>
         <Route path='/' element={<Home/>} />
+        <Route path='/collection' element={<Collection/>} />
+        <Route path='/about' element={<About/>} />
         <Route path='/cart' element={<Cart/>} />
         <Route path='/order' element={<PlaceOrder/>} />
 

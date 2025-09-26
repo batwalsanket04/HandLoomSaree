@@ -22,7 +22,9 @@ const Cart = () => {
         {/* Cart items */}
         <div className="divide-y divide-pink-100 mt-3">
           {SareeList2.map((val) => {
-            const quantity = cartItem[val.id] || 0;
+            const quantity = Number(cartItem[val.id]) || 0;
+                        console.log(quantity);
+
             if (quantity === 0) return null;
             const total = val.price * quantity;
 
@@ -51,7 +53,7 @@ const Cart = () => {
           })}
         </div>
         {/* Empty cart message */}
-        {SareeList2.filter(val => cartItem[val.id] > 0).length === 0 && (
+        {SareeList2.filter(val => Number(cartItem[val.id]) > 0).length === 0 && (
           <div className="text-center py-10 text-gray-500">
             Your cart is empty
           </div>

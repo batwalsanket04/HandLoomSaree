@@ -57,7 +57,7 @@ const Navbar = ({setShowLogine}) => {
             className="md:hidden text-gray-700"
             onClick={() => setIsOpen(!isOpen)}
           >
-            {isOpen ? <X size={28} /> : <Menu size={28} />}
+            {isOpen ? <X size={28} />:<Menu size={28} />}
           </button>
         </div>
       </div>
@@ -65,10 +65,10 @@ const Navbar = ({setShowLogine}) => {
       {/* Mobile Menu */}
       {isOpen && (
         <div className="md:hidden bg-white shadow-md px-6 py-4 space-y-4">
-          <a to="#" className="block text-gray-700 hover:text-pink-600">Home</a>
-          <a to="#" className="block text-gray-700 hover:text-pink-600">Collections</a>
-          <a to="#" className="block text-gray-700 hover:text-pink-600">About Us</a>
-          <a to="#" className="block text-gray-700 hover:text-pink-600">Contact</a>
+          <NavLink to="/" className="block text-gray-700 hover:text-pink-600">Home</NavLink>
+          <NavLink to="/collection" className="block text-gray-700 hover:text-pink-600">Collections</NavLink>
+          <NavLink to="/about" className="block text-gray-700 hover:text-pink-600">About Us</NavLink>
+          <NavLink to="/contact" className="block text-gray-700 hover:text-pink-600">Contact</NavLink>
           <button className="w-full bg-pink-600 text-white px-4 py-2 rounded-full hover:bg-pink-700"onClick={()=>setShowLogine(true)} >
             Sign In
           </button>
